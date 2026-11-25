@@ -1,0 +1,1460 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+body, .fancybox__toolbar{
+	font-family: 'Roboto', sans-serif;
+	font-size: clamp(1rem, 0.94rem + 0.26vw, 1.125rem);
+	line-height: 1.6;
+	color: rgba(10,10,11,0.70);
+}
+
+
+h1{
+	color: #FDFDFD;
+	font-size: clamp(1.625rem, 1rem + 3.2vw, 3.875rem);
+	line-height: 1.16;
+	letter-spacing: -0.025em;
+	overflow-wrap: anywhere;
+	border-bottom: 3px solid #FDFDFD;
+	padding-bottom: 32px;
+	margin-bottom: 24px;
+	
+}
+
+
+h2, .artista{
+	font-size: clamp(1.625rem, 1.2rem + 1.5vw, 2.5rem);
+	line-height: 1.23;
+	letter-spacing: -0.02em;
+}
+.artista{
+	transition: color .5s ease-in-out;
+}
+#about h2,.sectionBlack h2, #generazioneArtisti h2, #about h3, #openDay h2, #scuolaGallery h2, .fancybox__toolbar, #materieCorso p{
+	color: #FDFDFD;
+}
+
+h3{
+	font-size: clamp(1.25rem, 1.02rem + 0.8vw, 1.75rem);
+	line-height: 1.3;
+}
+h4{
+	font-size: clamp(1.0625rem, 0.96rem + 0.4vw, 1.3125rem);
+	font-weight: 700;
+	line-height: 1.35;
+}
+h5{
+	font-size: clamp(1rem, 0.94rem + 0.25vw, 1.1875rem);
+	font-weight: 700;
+	line-height: 1.4;
+}
+
+h1, h2, h3, .scrollText p, .statistiche span, .logoText a, .menuItems > a, .finestraMenuSecondaria li a, .artista{
+	font-family: 'Dela Gothic One', sans-serif;
+	font-weight: 400;
+}
+h2, h3, h4, h5, .clienteValutazione p, .finestraMenuSecondaria ul li a:not(#finestraMenuMob a), .artista{color:#0A0A0B}
+p,h2,h3,h4{margin: 0;}
+
+.row{
+		margin: 0px
+	}
+.col{
+	padding: 0!important;
+}
+section{
+	padding: clamp(3rem, 6vw, 5rem) 0;
+	background-color: #FDFDFD
+}
+
+#about,.sectionBlack, #generazioneArtisti,#openDay, footer, #scuolaGallery{
+	background-color: #0A0A0B;
+	color: rgba(253,253,253,0.70);
+	padding: clamp(3.5rem, 7vw, 6.5rem) 0;
+}
+.sectionBlack{
+	padding: clamp(3rem, 6vw, 5rem) 0;
+}
+.sectionAccent{
+	background-color: #C7A0FF;
+	color: rgba(10,10,11,0.70);
+}
+.pulsante{
+	padding: 16px 24px;
+	border-radius: 40px;
+	font-size: clamp(1rem, 0.93rem + 0.28vw, 1.125rem);
+	font-weight: 700;
+	line-height: 1.25;
+	transition: all .5s ease-in-out
+}
+.pulsanteStandard{
+	color: #FDFDFD;
+	border: 1px solid #FDFDFD;
+}
+.pulsanteBlack{
+	background-color: #0A0A0B;
+	border: 1px solid #0A0A0B;
+	color: #FDFDFD;
+}
+.pulsanteAccent{
+	background-color: #C7A0FF;
+	color: rgba(10,10,11,1.00);
+	border: 1px solid #C7A0FF;
+}
+
+.pulsanteStrokeBlack, .pulsante.pulsanteBlack:hover, #ctaModulo .pulsante.pulsanteAccent:hover, #calendarioDesk .pulsanteAccent:hover{
+	background-color: transparent;
+	border: 1px solid #0A0A0B;
+	color: #0A0A0B;
+}
+
+.pulsanteStandard:hover, .pulsanteAccent:hover, #filtroArtisti .pulsanteBlack:hover, #filtroArtisti .pulsanteBlack.activeBtn{
+	color: #0A0A0B;
+	background-color: #FDFDFD;
+	border: 1px solid #FDFDFD;
+}
+.pulsante svg{
+	margin-left: 8px;
+	fill: #0A0A0B;
+	transition: fill .25s ease;
+}
+.pulsanteStandard svg, .pulsanteBlack svg{
+	fill: #FDFDFD;
+}
+.pulsante:hover svg, .pulsante:focus-visible svg{
+	fill: #C7A0FF;
+}
+
+.pulsanteStrokeBlack:hover{
+	background-color: #0A0A0B;
+	color: #FDFDFD;
+}
+
+
+/* HEADER */
+[data-aos]{
+	pointer-events: inherit
+}
+[data-aos="headerBackground"].aos-animate{
+	background-color: #0A0A0B;
+}
+
+header{
+	height:160px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	z-index: 80;
+}
+header .container-fluid{	padding: 0px 80px;}
+#navbar .logo svg{
+	width: 76px;
+	height: auto;
+}
+#itemsMenu{
+	display: flex;
+	align-items:center;
+}
+.language a{
+	text-decoration: none;
+	color: rgba(253,253,253,0.70);
+	font-weight: 700;
+}
+.language a:first-of-type{
+	padding-right: 8px;
+	border-right: 1px solid #FDFDFD;
+	margin-right: 8px;
+}
+.language a.active{
+	color: #FDFDFD;
+}
+
+#menu{
+	width: 75px;
+	height: 32px;
+	position: relative;
+	margin-left: 50px;
+	cursor: pointer
+}
+#menu span{
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 4px;
+	width: 100%;
+	background-color: #FDFDFD;
+	border-radius: 100px
+}
+#menu span:nth-of-type(2){
+	top: 14px;
+	width: 48px;
+}
+#menu span:last-of-type{
+	top: 28px;
+	width: 23px
+}
+
+
+
+/* HERO */
+#hero{
+	position: relative;
+	height: 100dvh;
+	padding: 0px;
+	display: flex;
+	align-items: flex-end;
+	color: rgba(253,253,253,0.80);
+	font-weight: 400
+}
+#hero .container{
+	height: calc(100dvh - 160px);
+}
+video, .mySwiperHero{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	padding:0px;
+}
+
+#hero::after, #generazioneArtisti  .swiper-slide::after, .docentiDesk .row > div::after{
+	content: '';
+	width:100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+	background-color: rgba(0,0,0,0.40);
+	z-index: 2;
+	pointer-events: none;
+}
+#hero.heroAbout::after{
+	background-color: rgba(0,0,0,0.60)!important;
+}
+
+#hero p{
+	font-size: clamp(1.0625rem, 0.92rem + 0.65vw, 1.375rem);
+	line-height: 1.45;
+}
+
+/*ANIMATION*/
+.scrollText{
+	padding: clamp(1.25rem, 3vw, 2.25rem) 0;
+	background-color: #0A0A0B;
+	overflow: hidden;
+}
+.scrollText p{
+	margin: 0;
+	font-size: clamp(1.5rem, 1.1rem + 1.4vw, 2.25rem);
+	line-height: 1.2;
+	letter-spacing: 0.015em;
+	color: #FDFDFD;
+	white-space: nowrap;
+	display: inline-block;
+	animation: animationText 34s linear infinite;
+}
+
+@supports (-webkit-text-stroke: 1px currentColor){
+	.scrollText p{
+		-webkit-text-stroke: 0.65px currentColor;
+		-webkit-text-fill-color: transparent;
+	}
+}
+
+@keyframes animationText {
+  from {
+    transform: translateX(60%);
+  }
+  to {
+     transform: translateX(-100%);
+  }
+
+}
+
+.accentScroll, .finestraMenuSecondaria:not(#finestraMenuMob) {
+	background-color: rgba(199,160,255,1.00)!important;
+}
+.accentScroll p{
+	color: #000;
+	-webkit-text-fill-color: currentColor;
+	-webkit-text-stroke-width: 0;
+	animation-name: animation2;
+}
+
+@media (prefers-reduced-motion: reduce){
+	.scrollText{
+		text-align: center;
+	}
+	.scrollText p{
+		animation: none;
+		white-space: normal;
+		-webkit-text-stroke-width: 0;
+		-webkit-text-fill-color: currentColor;
+		padding: 0 1rem;
+	}
+}
+@keyframes animation2 {
+  from {
+    transform: translateX(70%);
+  }
+  to {
+     transform: translateX(-100%);
+  }
+
+}
+
+
+/*CORSI*/
+section h2 + p, #ultimeUscite h2{
+	margin: 0.875rem 0 clamp(1.75rem, 4vw, 3rem);
+}
+
+.swiper-wrapper{ height: 500px;
+}
+
+.swiper-slide:not(.mySwiperHero .swiper-slide), .docentiColCard .docentiCard{ 
+display: flex;
+flex-direction: column;
+position: relative;
+overflow: hidden;
+max-height: 416px;
+	gap:0;
+	
+}
+.firstRadius{
+	border-radius: 40px 0px 0px;
+}
+.lastRadius{
+	border-radius: 0px 0px 40px;
+}
+
+#corsi .overflow-hidden, #docenti .overflow-hidden{
+	height: 100%
+}
+.swiper-slide .wrapper-testi, .docentiColCard .docentiCard .wrapper-testi, .grigliaElemento .card-hover{
+	box-sizing: border-box;
+	position: absolute;
+	inset: auto 0 0;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0.25rem;
+	height: 5.75rem;
+	padding: 0.5rem clamp(0.75rem, 1.5vw, 1.125rem);
+	background-color: #C7A0FF;
+	text-align: center;
+	transition: background-color 0.25s ease;
+}
+
+#docenti .wrapper-testi p, .grigliaElemento .card-hover p{
+	color: rgba(10,10,11,0.75);
+	font-size: 1rem;
+	line-height: 1.35;
+}
+
+.grigliaElemento{
+	text-decoration: none;
+}
+
+.swiper-slide .wrapper-testi h4, .docentiColCard .wrapper-testi h4, .grigliaElemento .card-hover h4{
+	max-width: 100%;
+	font-size: clamp(1.0625rem, 0.96rem + 0.4vw, 1.25rem);
+	line-height: 1.25;
+	text-wrap: balance;
+	overflow-wrap: anywhere;
+}
+
+.wrapper-testi .top-card, .card-hover .top-card{
+	top: auto !important;
+	bottom: calc(100% + 0.625rem);
+	right: 0.625rem !important;
+	width: 2.5rem;
+	height: 2.5rem;
+	pointer-events: none;
+}
+
+.top-card{
+	background-color: #C7A0FF;
+	-webkit-mask: url("../img/arrow-card.svg") center / cover no-repeat;
+	mask: url("../img/arrow-card.svg") center / cover no-repeat;
+}
+
+.top-card img{
+	opacity: 0;
+}
+
+@media (hover: hover) and (pointer: fine){
+	.swiper-slide:hover .wrapper-testi, .docentiCard:hover .wrapper-testi, .grigliaElemento:hover .card-hover{
+		background-color: #D6B9FF;
+	}
+}
+
+.swiper-slide:focus-visible .wrapper-testi, .docentiCard:focus-visible .wrapper-testi, .grigliaElemento:focus-visible .card-hover{
+	background-color: #D6B9FF;
+	box-shadow: inset 0 0 0 2px #0A0A0B;
+}
+
+.swiperButtons{
+	position: absolute;
+	right:0px;
+	bottom: 0px;
+	align-items: end;
+	justify-content: space-between;
+	width: 147px;
+	height: 52px
+}
+.swiper-button-prev::after, .swiper-button-next::after{
+	content: none!important;
+}
+.swiper-button-prev, .swiper-button-next{
+	position: static;
+	width: 50%;
+	height: 100%;
+	background-repeat: no-repeat;
+}
+.swiper-button-prev{
+	--swiper-arrow: url("../img/prevArrow.svg");
+	background-image: var(--swiper-arrow);
+	margin-right: 4px;
+}
+.swiper-button-next{
+	--swiper-arrow: url("../img/nextArrow.svg");
+	background-image: var(--swiper-arrow);
+}
+@supports (mask: none){
+	.swiper-button-prev:not(.swiper-button-disabled):is(:hover, :focus-visible),
+	.swiper-button-next:not(.swiper-button-disabled):is(:hover, :focus-visible){
+		background: #C7A0FF;
+		mask: var(--swiper-arrow) left top no-repeat;
+	}
+}
+
+
+.top-card,.close {
+	transform: scale(0);
+	opacity: 0;
+	transition: all .5s ease-in-out .1s;
+}
+.swiper-slide:hover .top-card, .grigliaElemento:hover .top-card, .docentiCard:hover .top-card,
+.swiper-slide:focus-visible .top-card, .grigliaElemento:focus-visible .top-card, .docentiCard:focus-visible .top-card, .close.openClose{
+	transform: scale(1);
+	opacity: 1;
+}
+
+/*ABOUT*/
+
+#about{
+	overflow:hidden;
+}
+#about h2 + div{
+	margin-top: 24px
+}
+
+.statistiche{
+	padding: 72px 0px;
+	color: #FDFDFD
+}
+.statistiche li{
+	border-right: 2px solid #FDFDFD;
+	padding: 0px 40px;
+}
+.statistiche li:last-of-type{
+	border: none;
+}
+.statistiche span{
+	font-size: clamp(1.25rem, 1rem + 1vw, 1.875rem);
+	color: #C7A0FF
+}
+#about .overflow-hidden{
+	height: 421px;
+	border-radius: 40px 0px 40px 0px;
+	margin-bottom: 72px
+}
+.aboutH3 img{
+	margin-right: 16px
+}
+#about .storia p, .cardRecensione .clienteProfilo + p{
+	margin: 16px 0px 0px; 
+	font-size: 18px
+}
+
+
+/*CARD DOCENTI*/
+
+.cardDocenti{
+	width: 40%;
+	max-height: 90%;
+	position: fixed;
+	top: 5%;
+	left: 50%;
+	z-index: 150;
+	background-color: #FDFDFD;
+	overflow-y: auto;
+	pointer-events: none;
+	transform: translate(-50%, 10%);
+	opacity: 0;
+	transition: all .3s ease-in-out;
+}
+
+.cardDocenti.show{
+	transform: translate(-50%, 0%);
+	pointer-events: inherit;
+	opacity: 1
+}
+.closeDocenti{
+	position: absolute;
+	top: 11px;
+	right: 11px;
+	cursor: pointer;
+}
+.cardDocenti h3{
+	margin: 16px 0px 8px;
+}
+.topCurriculum{
+	padding: 50px 0px 24px;
+	background-color: #C7A0FF
+}
+.cardDocenti .overflow-hidden{
+	width: 150px;
+	height: 150px;
+	border-radius: 100%;
+}
+.bodyCurriculum{
+	padding: 32px 40px 50px;
+}
+.bodyCurriculum > div p{
+	margin-right: 16px;
+}
+.bodyCurriculum h4{
+	margin: 24px 0px 8px
+}
+.cardDocenti::-webkit-scrollbar{
+	width: 15px;
+	background-color: #FDFDFD
+}
+.cardDocenti::-webkit-scrollbar-thumb {
+background-color: rgba(199,160,255,0.70);
+
+}
+#backgroundBlack{
+	position: fixed;
+	top:0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(10,10,11,0.70);
+	z-index: 0;
+	pointer-events: none;
+	opacity:0;
+	transition: all .5s ease-in-out;
+}
+#backgroundBlack.show{
+	z-index: 120;
+	pointer-events: inherit;
+	opacity:1;
+}
+
+
+	.sectionBlack .overflow-hidden, .sectionWhite .overflow-hidden, .sectionAccent .overflow-hidden{
+		height: 387px
+	}
+
+/*GENERAZIONE ARTISTI*/
+
+.grigliaArtisti{
+	gap: 24px;
+	grid-template-areas: "a b c" "a e c" "d e f"
+}
+
+.grigliaUno{
+	grid-area: a;
+}
+.grigliaDue{
+	grid-area: b;
+}
+.grigliaTre{
+	grid-area: c;
+}
+.grigliaQuattro{
+	grid-area: d;
+	
+}
+.grigliaCinque{
+	grid-area: e;
+}
+.grigliaSei{
+	grid-area: f;
+}
+
+#generazioneArtisti .grigliaUno, #generazioneArtisti .grigliaTre, #generazioneArtisti .grigliaCinque{
+		height: 407px;
+}
+#generazioneArtisti .grigliaDue, #generazioneArtisti .grigliaQuattro, #generazioneArtisti .grigliaSei{
+	height: 305px;
+}
+
+.grigliaUno, #generazioneArtisti .grigliaUno{
+	border-radius: 40px 0px 0px;
+}
+.grigliaDieci, #generazioneArtisti .grigliaSei{
+	border-radius: 0px 0px 40px;
+}
+
+
+
+/*RECENSIONI*/
+
+#recensioni .swiper-wrapper{
+	height: auto;
+}
+#recensioni .swiper-slide.cardRecensione{
+	height: auto;
+	max-height: none;
+	gap: 1.25rem;
+	padding: clamp(1.25rem, 2.5vw, 2rem);
+	border: 1px solid rgba(10,10,11,0.16);
+	border-radius: 1.5rem;
+	background-color: #FDFDFD;
+}
+
+.cardRecensione .overflow-hidden{
+	width: 64px;
+	height: 64px;
+	border-radius: 100%;
+	margin-right: 16px
+}
+.clienteProfilo p{
+	font-size: 16px
+}
+.cardRecensione p{
+	padding: 0px;
+}
+.stelle{
+	margin-right: 12px;
+}
+
+/*OPEN DAY*/
+#openDay{
+	background-image: url("../img/open-day-background.webp");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+#openDay p, #cta p, #corsoMaster p{
+	margin-bottom: 32px;
+}
+
+/*FOOTER*/
+
+#empty{
+	background-color: transparent;
+	pointer-events: none;
+
+}
+#fullsite{
+	z-index: 1;
+	position: relative;
+	width: 100%;
+	height: 100%
+}
+
+footer{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	display: flex;
+	align-items: center
+}
+
+
+.titleFooter.row>*{
+	width: auto;
+}
+.logoText a{
+	text-decoration: none;
+	color: #FDFDFD;
+	font-size: clamp(1.75rem, 1rem + 2.8vw, 3.125rem);
+	line-height: 1.2;
+	transition: all .5s ease-in-out .3s
+}
+
+.artista:hover{
+	color: #FDFDFD;
+}
+
+footer h5{
+	color: #FDFDFD;
+	margin-bottom: 16px;
+}
+footer a{
+	font-size: 1rem;
+	color: rgba(253,253,253,0.70);
+	text-decoration: none;
+}
+footer a:hover, #language a:hover{
+	color: #FDFDFD;
+	transition: all .5s ease-in-out;
+}
+.iconeFooter{
+	border-left: 5px solid rgba(253,253,253,0.70);
+	min-height: 200px;
+	margin-right: 16px;
+}
+
+.iconeFooter a:first-of-type, .iconeFooter a:nth-of-type(3){
+	margin-bottom: 8px
+}
+footer .iconeFooter svg{
+		max-width: 60px!important
+	}
+
+footer .container > div:nth-of-type(2){
+	margin: 80px 0px;
+}
+
+
+/*MENU FINESTRA*/
+header.openMenu{
+	background-color: transparent!important;
+}
+.logo.openMenu svg path{
+	fill: rgba(10,10,11,1.00);
+	transition: all .5s ease-in-out;
+}
+
+#finestraMenuDesk, .finestraMenuSecondaria{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 0%;
+	height: 100%;
+	overflow:hidden;
+	background-color: rgba(10,10,11,1.00);
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	z-index: 70;
+	transition: all .5s ease-in-out;
+}
+#finestraMenuDesk{
+	justify-content: flex-end!important;
+}
+#finestraMenuDesk.openMenu, #finestraMenuMob.openMenu,.finestraMenuSecondaria.openMenu{
+	width: 100%;
+}
+.containerMenu{
+	height: calc(100% - 160px);
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center
+	
+}
+.close{
+		top: 50px!important;
+	right: 24px;
+	cursor: pointer;
+	position: fixed;
+}
+.close.openClose{
+	z-index: 90;
+}
+#finestraMenuMob .linkMobMenu, .finestraMenuSecondaria, #finestraMenuDesk.openMenu .menuItems{
+	transition: all .5s ease-in-out!important;
+}
+.menuItems, .linkMobMenu, .finestraMenuSecondaria ul{
+	width: 100%;
+	text-align: center;
+	opacity: 0;
+	transform: translateX(300%);
+	padding: 16px 0px;
+}
+
+#finestraMenuDesk.openMenu .menuItems, .finestraMenuSecondaria.openMenu ul,#finestraMenuMob.openMenu .linkMobMenu, #finestraMenuMob.openMenu .language{
+	transform: translateX(0%);
+	opacity: 1;
+	transition: all .8s ease-in-out .3s
+}
+
+.menuItems, .finestraMenuSecondaria li:last-of-type{
+	margin-bottom: 0px;
+}
+.menuItems:hover .menuLinks li{
+	opacity: 1;
+	animation: mostraLi .5s;
+}
+.menuItems:hover .backgroundItems{
+	width: 100%
+}
+
+.menuItems > a, .finestraMenuSecondaria li a{
+	font-size: clamp(1.5rem, 1rem + 2vw, 2.625rem);
+	line-height: 1.2;
+	text-decoration: none;
+	color: #FDFDFD;
+	transition: all .5s ease-in-out;
+}
+ .menuLinks li{
+	  margin: 14px 40px 0px 0px;
+	 opacity: 0;
+}
+
+.menuLinks li:last-of-type{
+	margin-right: 0;
+}
+.menuLinks li a{
+	text-decoration: none;
+	color: rgba(10,10,11,0.70);
+	font-size: clamp(1rem, 0.85rem + 0.55vw, 1.25rem);
+	font-weight: 700;
+	transition: all .5s ease-in-out;
+}
+.menuLinks li a:hover, .menuItems:hover >a{ color: #0A0A0B}
+.backgroundItems{
+	background-color: #C7A0FF;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0%;
+	height: 100%;
+	z-index: -1;
+	transition: all .5s ease-in-out;
+}
+
+
+#finestraMenuMob li a{
+	font-size: clamp(1.25rem, 0.95rem + 1.25vw, 1.625rem)
+}
+
+.finestraMenuSecondaria li{
+	margin-bottom: 40px;
+}
+
+.finestraMenuSecondaria li a{
+	font-size: clamp(1.125rem, 0.95rem + 0.6vw, 1.375rem);
+}
+.finestraMenuSecondaria .language{
+margin: 50px 0px 0px!important;
+opacity: 0
+}
+
+	
+
+
+/*-----------------------------ABOUT PAGE -----------------------------*/
+
+#introAbout .row > div:first-of-type{
+	padding-right: 63px
+}
+.griglia{
+	display: grid;
+	gap:8px;
+	width: 892px;
+	grid-template-areas: 'a b c d e' 'f g h i l'
+}
+
+.grigliaSette{
+	grid-area: g
+}
+.grigliaOtto{
+	grid-area: h
+}
+.grigliaNove{
+	grid-area: i
+}
+.grigliaDieci{
+	grid-area: l
+}
+.griglia > a:hover img{
+	transform: scale(1.2);
+	transition: all .5s ease-in-out
+}
+	.docentiAbout .docentiCard, #ultimeUscite .row div{
+	height: 416px;
+	color: rgba(10,10,11,0.70);
+	width: calc(33% - 12px)
+}
+.docentiAbout .docentiCard:nth-of-type(1), .docentiAbout .docentiCard:nth-of-type(2), .docentiAbout .docentiCard:nth-of-type(3){
+	margin-bottom: 58px
+} 
+[data-fancybox-toggle-slideshow]{
+	display: none
+}
+
+#cta{
+	background-color: #C7A0FF;
+	padding: clamp(3.5rem, 7vw, 6.5rem) 0;
+}
+
+
+/*----------------------------- ARTISTS PAGES -----------------------------*/
+#filtroArtisti{
+	padding: 16px 32px;
+	background-color: #A86CFD;
+	width: 452px;
+	border-radius: 40px;
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 58px
+}
+#filtroArtisti .pulsante{
+	transition-duration: .3s
+}
+.nomiArtisti li{
+	margin-bottom: 42px;
+}
+
+.artista{
+	line-height: 120%;
+	text-decoration: none;
+	display: block;
+	width: 60%
+}
+
+
+#immagine{
+	width: 365px;
+	height: 365px;
+	position: absolute;
+	right: 172px;
+	top: 50%;
+	transform:scale(0);
+	opacity: 0;
+	display: none;
+	transition: all .5s ease-in-out .3s
+}
+#immagine.mostraFoto{
+	display: block;
+	transform:translateY(-50%) scale(1);
+	opacity: 1;
+}
+
+.heroImmagine{
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat
+}
+.heroGiovanni{
+	background-image: url("../img/giovanni-sorrentino-hero.webp")
+}
+.heroAna{
+	background-image: url("../img/ana-maric-hero.webp")
+}
+.heroMaria{
+	background-image: url("../img/maria-fortunato-hero.webp")
+}
+.heroMariano{
+	background-image: url("../img/mariano-benni-hero.webp")
+}
+.heroSandra{
+	background-image: url("../img/sandra-merola-hero.webp")
+}
+.heroMike{
+	background-image: url("../img/mike-ross-hero.webp")
+}
+#diceDiNoi i{
+	color: #C7A0FF;
+	margin-right: 24px
+}
+
+/*------------------------ CORSI PAGES ------------------------- */
+#featuresCorso{
+	padding: 50px 0px
+}
+#featuresCorso li{
+	border-right: 2px solid #0A0A0B;
+	padding:0px 30px;
+	margin-right: 8px
+}
+#featuresCorso li:last-of-type{
+	border: none;
+	margin-right: 0px
+}
+#featuresCorso h3, .domanda h3{
+	font-family: 'Roboto', sans-serif;
+	font-size: clamp(1.125rem, 0.96rem + 0.6vw, 1.5rem);
+	font-weight: 700;
+	margin-bottom: 8px
+}
+#featuresCorso span{
+	font-weight: 700
+}
+#ctaModulo .pulsante.pulsanteAccent{
+	margin-bottom: 16px
+}
+
+#materieCorso p{
+	margin-bottom: 16px
+}
+#materieCorso span{
+	color: #C7A0FF
+}
+.domanda{
+	padding: clamp(1rem, 2.5vw, 1.5rem) 0;
+	border-bottom: 1px solid rgba(10,10,11,0.24);
+	cursor: pointer;
+}
+.domanda h3{
+	margin-right: 30px
+}
+.domanda.show svg{
+	transform: rotate(180deg)
+}
+.domanda.show .risposta{
+	display: block
+}
+.domanda:first-of-type{
+	border-top: 1px solid rgba(10,10,11,0.24);
+}
+.risposta{
+	margin-top: 1rem;
+	display: none;
+}
+.risposta li:not(.risposta li:last-of-type){
+	margin-bottom: 16px
+}
+
+/*-----------------CALENDARIO-------------------*/
+.heroCalendario{
+	background-image: url("../img/calendario-background.webp")
+}
+.table{
+	border: 1px solid rgba(10,10,11,1.00)!important;
+}
+tbody, td, tfoot, th, thead, tr{
+	vertical-align: middle!important;
+	text-align: center;
+	border-bottom: none
+}
+#calendarioDesk thead .titlesTable th{
+	background-color: rgba(10,10,11,1.00)!important;
+	padding: 35px 24px;
+}
+#calendarioDesk thead .titlesTable th h4, .calendarioMobHead h4{
+	color: #FDFDFD!important;
+}
+.table>:not(caption)>*>*{
+	background-color: transparent;
+	
+}
+tbody tr th{
+	background-color: #C7A0FF!important;
+	border-bottom: 1px solid rgba(10,10,11,1.00);
+	border-right: 1px solid rgba(10,10,11,1.00);
+	font-size: 1.0625rem;
+}
+tbody td{
+	padding: 32px 0px!important;
+	border-bottom: 1px solid rgba(10,10,11,1.00);
+}
+
+/*--------------------CONTATTI-----------------------*/
+.heroContatti{
+	background-image: url("../img/contatti-background.webp")
+}
+#form{
+	background-color: #C7A0FF
+}
+#modulo_prenotazione{ background-color: #FDFDFD;
+	padding: 71px 70px;
+	width:939px
+}
+#form h4{color: rgba(10,10,11,0.70)!important;
+}
+select, input,textarea{
+	border-radius:40px;
+	padding: 25px 16px;
+	border: 1px solid rgba(10,10,11,0.45);
+	margin-top:8px;
+}
+select:focus, input:not(input[type="submit"]):focus, textarea:focus{
+	border-color: #7652A5;
+	outline: 2px solid #C7A0FF;
+	outline-offset: 2px;
+}
+
+select, input:not(input[type="checkbox"]){width:387px;
+	margin-bottom: 24px
+}
+select{
+	content: none;
+	 -webkit-appearance: none;
+	background-image: url("../img/arrow-down.png");
+	background-repeat: no-repeat;
+  background-position-x: calc(100% - 16px);
+  background-position-y: 50%;
+	color:rgba(10,10,11,0.70)!important
+}
+textarea{
+	width: 100%;
+	height: 200px
+}
+input[type="checkbox"]{
+	margin: 32px 0px
+}
+p input[type="submit"]{
+	width:100%
+}
+#messaggio{
+	margin-top: 16px;
+	padding: 30px;
+	width:939px;
+	display: none
+}
+
+
+/*TABLET LANDSCAPE - SMALL LAPTOP*/
+@media(max-width:1199px){
+	.pulsanteStandard:hover{
+		background-color: transparent!important;
+		color: #FDFDFD!important;
+		border: 1px solid #FDFDFD!important;
+	}
+	.pulsanteAccent:hover:not(:has(svg)){
+		background-color: rgba(199,160,255,1.00)!important;
+		color: #0A0A0B!important;
+		border: 1px solid rgba(199,160,255,1.00)!important
+	}
+	.pulsanteBlack:hover, #filtroArtisti .pulsanteBlack:active{
+		background-color: #0A0A0B!important;
+		color: #FDFDFD!important;
+		border: 1px solid #0A0A0B!important;
+	}
+	.pulsanteStrokeBlack:hover{
+		background-color: transparent!important;
+		color: #0A0AB!important;
+		border: 1px solid #0A0AB!important;
+	}
+	.cardDocenti {
+		width: 70%
+	}
+	.swiper-slide p{
+		font-size: 16px!important;
+	}
+	
+
+	 
+	#generazioneArtisti .swiper-wrapper{
+		height: 350px;
+		width: 100%
+	}
+	#generazioneArtisti  .swiper-slide {
+     width: 40%!important;
+	border-radius: 0px;
+	position: relative;	
+    }
+	
+
+	
+	.nomeArtista{
+		position: absolute!important;
+		bottom: 20px;
+		left: 20px;
+		z-index: 5!important;
+		color: rgba(253,253,253,0.70)
+	}
+	.nomeArtista h4{
+		color: #FDFDFD;
+	}
+	
+	#recensioni .swiper-slide.cardRecensione{
+		width: 85%!important;
+	}
+	
+	#immagine.mostraFoto{
+		display: none;
+		opacity: 0;
+		scale(0)
+		
+	}
+	.artista{width: 100%!important}
+	.artista:hover{
+		color: #0A0A0B;
+	}
+
+
+}
+
+
+
+
+/*TABLET VERTICALE (PORTRAIT)*/
+@media(max-width:991px){
+		.swiper-slide:not(#recensioni .swiper-slide), .swiper-slide .overflow-hidden, .swiper-slide .wrapper-testi, #about .overflow-hidden{
+		border-radius: 0px!important
+	}
+	.swiper-wrapper{
+		height: 416px
+	}
+	 #about .pulsante, .titleFooter.row>*{
+		width: 100%;
+		margin-top: 24px
+	}
+	
+	
+	
+	.statistiche li{
+		text-align: center;
+		border-right: none;
+	}
+	.statistiche li:nth-of-type(1), .statistiche li:nth-of-type(2), .storia > div:first-of-type{
+		margin-bottom: 72px;
+	}
+	.aboutH3 img{
+		width: 30px
+	}
+	
+	
+	.sectionBlack .row > div:last-of-type, .sectionWhite .row > div:first-of-type, .sectionAccent .row > div:last-of-type{
+		margin-bottom: 58px
+	}
+	
+	#recensioni .swiper-slide{
+		width: 45%!important
+	}
+	
+	
+	footer .pulsante{
+		margin-top: 32px;
+		
+	}
+	.informazioniFooter{
+		margin: 32px 0px
+	}
+	.iconeFooter{
+		border-left: none;
+		border-top: 5px solid rgba(253,253,253,0.70);
+		min-height: auto;
+		padding-top: 24px;
+		margin-top:40px;
+	}
+	.iconeFooter a{
+		margin-right: 20px;
+	}
+	.iconeFooter a:first-of-type, .iconeFooter a:nth-of-type(3){
+	margin-bottom: 0px
+}
+	
+	#introAbout h3{
+		margin-bottom: 32px
+	}
+	#introAbout .row > div:first-of-type{
+		padding-right: 0px
+	}
+	
+	
+	.griglia{
+	grid-template-areas: 'a b' 'c d' 'e f' 'g h' 'i l';
+		width: 696px
+}
+	
+	.docentiColCard{
+		flex-wrap: nowrap;
+		overflow:hidden;
+		overflow-x: scroll;
+		 -ms-overflow-style: none;
+  scrollbar-width: none;
+	}
+	.docentiColCard::-webkit-scrollbar {
+  display: none;
+}
+	.docentiColCard .docentiCard{
+		min-width: 400px; 
+	}
+	.docentiColCard .docentiCard:nth-of-type(1),.docentiColCard .docentiCard:nth-of-type(2),.docentiColCard .docentiCard:nth-of-type(3){
+		margin-bottom: 0px
+	}
+
+	#empty{
+		display: none
+	}
+	footer{
+	position: static;
+	width: 100%;
+	z-index: 0;
+	display: flex;
+	align-items: center
+}
+	
+	#ultimeUscite .row div{
+		width: 100%;
+		margin: 0px;
+	}
+	#ultimeUscite .row div:nth-of-type(2){
+		margin: 24px 0px
+	}
+	
+	#featuresCorso li{
+		padding: 32px 0px;
+		border-right: none;
+		border-bottom: 2px solid #0A0A0B
+	}
+	#materieCorso p{
+		margin-bottom: 8px
+	}
+	#calendario{
+		background-color: #C7A0FF
+	}
+	.cardCalendario{
+		width: 500px;
+		background-color: #FDFDFD;
+		margin-bottom: 32px
+	}
+	.calendarioMobHead{
+		height: 178px;
+		background-color: #0A0A0B;
+	}
+	.calendarioMobBody {
+		padding: 24px 30px 30px
+	}
+	.calendarioMobBody li{
+		margin-bottom: 24px
+	}
+	.calendarioMobBody li:last-of-type{
+		margin-bottom: 32px
+	}
+	
+	strong{
+		color: rgba(10,10,11,1.00)
+	}
+	#form{
+		padding: 80px 50px;
+		background-color:#FDFDFD
+	}
+	#modulo_prenotazione{
+		padding: 0px;
+		width:100%
+	}
+	select, input:not(input[type="checkbox"]){
+		width:100%
+	}
+	#messaggio{
+		width:100%
+	}
+}
+
+/*SMARTPHONE*/
+@media (max-width:767px){
+	header{
+		height: 120px;
+	}
+	h1{
+		border-bottom: none;
+		padding: 0px;
+	}
+	.pulsante{
+		width: 100%
+	}
+	#hero .container{
+		height: calc(100dvh - 120px);
+	}
+	.container, header .container-fluid{
+		padding:0px 24px;
+		overflow: hidden
+	}
+	#navbar .logo svg{
+		width: 52px;
+	}
+	@keyframes animationText{
+		from{
+			transform: translateX(20%)
+		}
+		to{
+			transform: translateX(-100%)
+		}
+	}
+	@keyframes animation2{
+		from{
+			transform: translateX(20%)
+		}
+		to{
+			transform: translateX(-100%)
+		}
+	}
+	.swiper-wrapper{
+		height: 350px
+	}
+	#corsi .swiper-wrapper{
+		display: flex;
+		flex-direction: column;
+		height: auto
+	}
+	#corsi .swiper{
+		overflow:inherit!important
+	}
+	#corsi .swiper-slide{
+		width:100%!important;
+		margin: 0px!important;
+		margin-bottom: 24px!important;
+	}
+	#corsi .swiper-slide:last-of-type{
+		margin-bottom: 0px
+	}
+	
+	
+	#about .container{
+		padding: 0px;
+	}
+	.aboutContent{
+		display: flex;
+		flex-direction: column;
+		align-items: center
+	}
+	#about .col{
+		width: 100vw;
+	}
+	#about .col, #about h2{
+		padding: 0px 24px!important
+	}
+	.statistiche li{
+		margin-bottom: 72px
+	}
+	#docenti .swiper-slide, #generazioneArtisti .swiper-slide, .docentiColCard .docentiCard{
+     width: 83%!important;
+		max-height: 350px
+    }
+	.docentiColCard .docentiCard{
+		min-width: 283px
+	}
+	.cardDocenti{
+		top: 0;
+		width: 100%;
+		height: 100%;
+		max-height: none;
+	}
+	#recensioni .swiper-slide.cardRecensione{
+		width: 90%!important;
+	}
+
+	footer .iconeFooter div a svg{
+		max-width: 40px!important
+	}
+	
+	.griglia{
+		width: 100%;
+	}
+	
+	#filtroArtisti{
+		display: flex;
+		flex-direction: column;
+		width: 300px;
+	}
+	#filtroArtisti button:nth-of-type(2){
+		margin: 8px 0px
+	}
+	
+	.cardCalendario{
+		width: min(100%, 300px);
+	}
+
+}
